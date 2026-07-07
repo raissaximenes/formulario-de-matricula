@@ -12,16 +12,27 @@
   --text-primary: #292524;
   --text-secondary: #57534e;
   --text-tertiary: #8f8881;
-  -text-highlight: #e43412;
+  --text-highlight: #e43412;
 
   --surface-primary: #ffffff;
   --surface-secondary: #fee7d6;
 
   --stroke-default: #d6d3d1;
-  --stroke-hightlight: #f3541c;
+  --stroke-highlight: #f3541c;
   --semantic-error: #dc2626;
 }
 
 body { 
   overflow: hidden; /*garante que n vai possuir rolagem/ transbordamento */
+
+  font: var(--text);
+  color: var(--text-secondary);
+}
+  h1, h2{
+    color:var(--text-primary);
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
 }
