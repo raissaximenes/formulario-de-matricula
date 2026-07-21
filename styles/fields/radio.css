@@ -1,0 +1,6 @@
+/*aplicavel a todo label que tenha na sequencia um radio-wrapper*/ 
+
+label + .radiowrapper {
+  margin-top: 1rem;
+}
+
