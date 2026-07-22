@@ -20,6 +20,20 @@
   }
 
   .checkbox-image {
-    
+    flex: 0 0 1.5rem; /*zero e defino o tamanho da imagem*/ 
+    height: 1.5rem;
+    background-image: url("../../assets/icons/square0.svg");
   }
-}
+
+  &:hover, &:focus-within {
+    .checkbox-image {
+      background-image: url("../../assets/icons/square.svg");
+    }
+  }
+
+  &:has(:checked) {
+    .checkbox-image{
+      background-image: url("../../assets/icons/checkmark-square-01.svg");
+    }
+  }
+} 

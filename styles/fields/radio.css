@@ -1,6 +1,59 @@
 /*aplicavel a todo label que tenha na sequencia um radio-wrapper*/ 
 
-label + .radiowrapper {
+label + .radio-wrapper {
   margin-top: 1rem;
 }
 
+/* configurando a disposicao do grid */
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 1rem;
+}
+
+.radio-inner {
+  border: 1px solid var(--stroke-default);
+  border-radius: 0.5rem;
+  
+  display: grid;
+  justify-items: center;
+  gap:.5rem; 
+  padding: 2rem .5rem .5rem; /*cima, larerais, baixo*/ 
+
+  position: relative;
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset; /*retirando as informacoes do input*/
+    position: absolute; /*deixa o posicionamento por cima de tudo*/ 
+    inset: 0;
+  }
+
+  .radio-image {
+    background-image: url("../../assets/icons/circlebranco.svg");
+    width:1.5rem;
+    height: 1.5rem;
+
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  &:hover, &:focus-within {
+    border: 1px solid var(--stroke-highlight);
+
+    & .radio-image { 
+      background-image: url("../../assets/icons/circlevermelho.svg")
+    }
+  }
+
+  &:has(:checked){
+    border: 2px solid var(--stroke-highlight);
+
+    & .radio-image {
+      background-image: url("../../assets/icons/checkmark-circle-01.svg");
+    }
+  }
+}
+
+ 
