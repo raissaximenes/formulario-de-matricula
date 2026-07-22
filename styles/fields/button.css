@@ -7,7 +7,7 @@ button {
   border-radius: .5rem;
   cursor: pointer;
 
-  & .btn-primary {
+  &.btn-primary {
     color: #ffffff;
     background-color: #e43a12;
 
@@ -16,7 +16,7 @@ button {
     }
   }
 
-  & .btn-secondary {
+  &.btn-secondary {
     margin-left: auto;
     border: 1px solid var(--text-highlight);
 
