@@ -44,14 +44,28 @@ input {
   }
 
   &:invalid {
-  border: 0.125rem solid var(--semantic-error);
+    border: 0.125rem solid var(--semantic-error);
   }
 
   & + small {
-  font: var(--text-sm);
-  color:#786a60;
+    font: var(--text-sm);
+    color:#786a60;
 
-  display: inline-block;
-  margin-top: .25rem;
+    display: inline-block;
+    margin-top: .25rem;
+  }
+
+  &[required] + .error {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin-top: 0.25rem;
+
+    font: var(--text-sm);
+    color: var(--semantic-error);
+  }
+
+  &:valid + .error{
+    display: none;
   }
 } 
